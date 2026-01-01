@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.pets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.pet-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+.pet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.pet-card h3 {
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.pet-card p {
+  color: #555;
+  font-size: 14px;
+}
+.cute {
+  font-style: italic;
+  color: #ff6b81;
+  margin: 10px 0;
+}
+.pet-card button {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pet-card button:hover {
+  background-color: #ff4757;
+}
+form {
+  max-width: 500px;
+  background: white;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+form button {
+  width: 100%;
+  background-color: #2ed573;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1eae60;
+}
+/* Adoption Form */
+.adoption-container input::placeholder,
+.adoption-container textarea::placeholder {
+  color: #aaa;
+}
+.adoption-container input:focus,
+.adoption-container textarea:focus,
+.adoption-container select:focus {
+  border-color: #ff6b81;
+  box-shadow: 0 0 5px rgba(255,107,129,0.3);
+}
+ @media (max-width: 600px) {
+  .adoption-container {
+    margin: 30px;
+    padding: 30px;
+  }
+}
+h1{
+    text-align: center;
+    margin-top: 0%;
+    padding: 20px ;
+   background-color: #ccc;
+   color: #ea5cd5;
+}
+h2{
+   text-align: center;
+   color: #e36fd5;
+}
+body {
+    background: #eef2f5;
+    font-family: Arial, sans-serif;
+}
+
+.pets-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pet-card {
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pet-info {
+    padding: 15px;
+}
+
+.pet-info h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pet-info p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.adopt-btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background: #e36fd5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.adopt-btn:hover {
+    background: #df64d6;
+}
+.success-box {
+  background: #eafff1;
+  border-left: 6px solid #ea5cd5;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: pop 0.6s ease;
+}
+
+.success-box h3 {
+  color: #f089ed;
+  margin-bottom: 10px;
+}
+
+.success-box p {
+  color: #333;
+  font-size: 16px;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+#toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: none;
+}
+
+.toast-card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 16px;
+  text-align: center;
+  min-width: 280px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  animation: toastPop 0.30s ease;
+}
+
+.toast-card h4 {
+  color: #2ed573;
+  margin-bottom: 10px;
+}
+
+.toast-card p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@keyframes toastPop {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.success-card {
+  max-width: 380px;
+  margin: 80px auto;
+  text-align: center;
+  animation: cardPop 0.6s ease;
+}
+
+.success-card h3 {
+  color: #f45ded;
+  margin-bottom: 10px;
+}
+
+.success-card p {
+  color: #444;
+}
+
+@keyframes cardPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+strong{
+  color: #ea5cd5;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, .05);
+
+
+}
+
+.heading span{
+    color: var(--pink);
+    font-family: mv boli;
+}
+.btn{
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 18px;
+    border-radius: 100px;
+    background: #000;
+    padding: 19px 36px; /*la taille tae hadik noir tae shop now*/
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 308px; 
+}
+.btn:hover{
+    background: var(--pink);
+}
+header{
+   position:relative;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1);
+}
+
+ header .logo{
+    font-size:3rem;
+    color: #333;
+    font-weight: bolder;
+ }
+
+header .logo span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    text-align: center;
+    font-size: 2rem;
+    padding: 0 0.4rem;
+    color:#ea5cd5;
+    background-color: #ccc;
+    
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+}
+
+header .icons a{
+    font-size: 3rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+#pageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
