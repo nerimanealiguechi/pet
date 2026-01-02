@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #dee5ef;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.pets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.pet-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+
+.pet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.pet-card h3 {
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.pet-card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.cute {
+  font-style: italic;
+  color: #ff6b81;
+  margin: 10px 0;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pet-card button {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pet-card button:hover {
+  background-color: #ff4757;
+}
+
+
+.cube-wrapper {
+  margin-top: 80px;
+  padding: 50px 0;
+  background: #f5f7fb;
+  border-radius: 20px;
+}
+
+.gamecube-section {
+  perspective: 900px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.cube {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 8s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #ff6b81;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.front  { transform: translateZ(75px); }
+.back   { transform: rotateY(180deg) translateZ(75px); }
+.right  { transform: rotateY(90deg) translateZ(75px); }
+.left   { transform: rotateY(-90deg) translateZ(75px); }
+.top    { transform: rotateX(90deg) translateZ(75px); }
+.bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+@keyframes spin {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+
+
+.bottom-product {
+  margin-top: 60px;
+}
+
+
+
+.cube-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.cube-images img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.cube-images img:hover {
+  transform: scale(1.05);
+}
+ 
+
+.adoption-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.adoption-container input,
+.adoption-container textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.adoption-container textarea {
+  resize: none;
+  height: 100px;
+}
+
+.adoption-container button {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.adoption-container button:hover {
+  background-color: #ff4757;
+}
+.bottom-product {
+  margin-top: 60px;
+}
